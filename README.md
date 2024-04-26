@@ -1,7 +1,7 @@
 # Why Does This Exist
 Let's say you have a taiko map, and you want to have a gradual SV change over the course of however many beats.
 
-You could either create however many timing points and set the SV multipliers by hand... or instead you can use osvgen!
+You could either create however many timing points and set the SV multipliers by hand... or instead you can use osvgen ([http://seenry.github.io/osvgen](http://seenry.github.io/osvgen))!
 
 # Tutorial/Example
 Below I have a map where I want to create an SV gradient between two timing points:
@@ -14,7 +14,7 @@ We'll want to open up the `.osu` file for the beatmap to get timing point inform
 
 ![alt text](<screenshots/スクリーンショット 2024-04-25 204822.png>)
 
-We can copy these lines into the first two boxes of osvgen ([http://seenry.github.io/osvgen](http://seenry.github.io/osvgen)).
+We can copy these lines into the first two boxes of osvgen.
 
 By default, osvgen will take us from 1.00x to 2.00x speed. You can change these if you want, but for this example, the default will do.
 
