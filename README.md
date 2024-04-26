@@ -14,7 +14,7 @@ We'll want to open up the `.osu` file for the beatmap to get timing point inform
 
 ![alt text](<スクリーンショット 2024-04-25 204822.png>)
 
-We can copy these lines into the first two boxes of the tool.
+We can copy these lines into the first two boxes of osvgen ([http://seenry.github.io/osvgen](http://seenry.github.io/osvgen)).
 
 By default, osvgen will take us from 1.00x to 2.00x speed. You can change these if you want, but for this example, the default will do.
 
