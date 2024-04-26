@@ -42,7 +42,7 @@ function InputBox(props) {
 function App() {
   const [state, setState] = useState({
     "start": "0,-100,4,1,0,100,1,0",
-    "end": "100,-100,4,1,0,100,1,0",
+    "end": "100,-100,4,1,0,100,0,0",
     "v0": "1.00",
     "vf": "2.00",
     "off": "-3",
