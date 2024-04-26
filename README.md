@@ -28,7 +28,7 @@ We can copy the output and **replace** the two timing points in the `.osu` file
 
 ![alt text](<スクリーンショット 2024-04-25 205129.png>)
 
-And as we can see, our timing points have been added~~
+After saving, if we reload our map, we can see our timing points have been added~
 
 ![alt text](<スクリーンショット 2024-04-25 205655.png>)
 
