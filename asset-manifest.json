@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/osvgen/static/js/main.ac88329b.js",
+    "main.js": "/osvgen/static/js/main.57a8b8b8.js",
     "index.html": "/osvgen/index.html",
-    "main.ac88329b.js.map": "/osvgen/static/js/main.ac88329b.js.map"
+    "main.57a8b8b8.js.map": "/osvgen/static/js/main.57a8b8b8.js.map"
   },
   "entrypoints": [
-    "static/js/main.ac88329b.js"
+    "static/js/main.57a8b8b8.js"
   ]
 }
