@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Why Does This Exist
+Let's say you have a taiko map, and you want to have a gradual SV change over the course of however many beats.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You could either create however many timing points and set the SV multipliers by hand... or instead you can use osvgen!
 
-## Available Scripts
+# Tutorial/Example
+Below I have a map where I want to create an SV gradient between two timing points:
 
-In the project directory, you can run:
+![alt text](<スクリーンショット 2024-04-25 204631.png>)
 
-### `npm start`
+We'll want to open up the `.osu` file for the beatmap to get timing point information:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![alt text](<スクリーンショット 2024-04-25 204706.png>)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![alt text](<スクリーンショット 2024-04-25 204822.png>)
 
-### `npm test`
+We can copy these lines into the first two boxes of the tool.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+By default, osvgen will take us from 1.00x to 2.00x speed. You can change these if you want, but for this example, the default will do.
 
-### `npm run build`
+For my beatmap, there are (28 + 1/4) measures from timing point 1 to timing point 2. Since I'm using 1/4 snapping there are (28 + 1/4) * 4 = 113 beats meaning I will want to insert 113 - 2 = 111 timing points (-2 because we already have our first and last timing points).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The offset gets applied to every timing point (I made it -3 so that even if there are small rounding errors, the timing point will come before the note). An exception is when the first timing point is uninherited in which case no offset is applied to the first timing point.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![alt text](<スクリーンショット 2024-04-25 204914.png>)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+We can copy the output and **replace** the two timing points in the `.osu` file
 
-### `npm run eject`
+![alt text](<スクリーンショット 2024-04-25 205129.png>)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+And as we can see, our timing points have been added~~
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![alt text](<スクリーンショット 2024-04-25 205655.png>)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Final Notes
+Hopefully this is useful to some people. If you run into any issues, feel free to create a github issue for it and I'll help/fix things if I can lol.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy mapping!
